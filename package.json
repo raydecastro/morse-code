@@ -4,7 +4,8 @@
   "description": "morse code generator + parser",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "build": "babel source --out-dir ./target --source-maps",
+    "test": "mocha --require @babel/register"
   },
   "repository": {
     "type": "git",
