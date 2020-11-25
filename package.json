@@ -32,5 +32,8 @@
     "@babel/register": "^7.12.1",
     "chai": "^4.2.0",
     "mocha": "^8.2.1"
+  },
+  "dependencies": {
+    "morse-code-core": "file:"
   }
 }
