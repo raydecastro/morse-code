@@ -1,3 +1,9 @@
+// TODO: refactor this to remove duplication and possibly use inheritance
+//
+// import MorseCodeGenerator from "../source/morsecodegenerator.js";
+//
+// class ShortHandMorseCodeGenerator extends MorseCodeGenerator {
+
 class ShortHandMorseCodeGenerator {
     constructor() {
         this.dot = ".";
