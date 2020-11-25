@@ -8,52 +8,54 @@ describe("ShortHandMorseCodeGenerator", () => {
         expect(shmcg).to.not.be.undefined;
     });
 
-/* 
-
-    TODO: refactor all this to support the shorthand version of imc (international morse code)
-
     it("shall generate a dot as one unit", () => {
-        let mcg = new MorseCodeGenerator();
+        let shmcg = new ShortHandMorseCodeGenerator();
 
-        expect(mcg.generateDot()).to.equal(".");
-        expect(mcg.generateDot().length).to.equal(1);
+        expect(shmcg.generateDot()).to.equal(".");
+        expect(shmcg.generateDot().length).to.equal(1);
     });
 
-    it("shall generate dash as three units", () => {
-        let mcg = new MorseCodeGenerator();
+    it("shall generate dash as one unit", () => {
+        let shmcg = new ShortHandMorseCodeGenerator();
 
-        expect(mcg.generateDash()).to.equal("---");
-        expect(mcg.generateDash().length).to.equal(3);
+        expect(shmcg.generateDash()).to.equal("-");
+        expect(shmcg.generateDash().length).to.equal(1);
     });
 
-    it("shall generate a space between the same letter as one unit", () => {
-        let mcg = new MorseCodeGenerator();
+    it("shall generate a space between the same letter as zero unit", () => {
+        let shmcg = new ShortHandMorseCodeGenerator();
 
-        expect(mcg.generateSpaceBetweenSameLetter()).to.equal(" ");
-        expect(mcg.generateSpaceBetweenSameLetter().length).to.equal(1);
+        expect(shmcg.generateSpaceBetweenSameLetter()).to.equal("");
+        expect(shmcg.generateSpaceBetweenSameLetter().length).to.equal(0);
     });
 
-    it("shall generate space between different letters as three units", () => {
-        let mcg = new MorseCodeGenerator();
+    it("shall generate space between different letters as one unit", () => {
+        let shmcg = new ShortHandMorseCodeGenerator();
 
-        expect(mcg.generateSpaceBetweenDifferentLetters()).to.equal("   ");
-        expect(mcg.generateSpaceBetweenDifferentLetters().length).to.equal(3);
+        expect(shmcg.generateSpaceBetweenDifferentLetters()).to.equal(" ");
+        expect(shmcg.generateSpaceBetweenDifferentLetters().length).to.equal(1);
     });
 
-    it("shall generate space between words as seven units", () => {
-        let mcg = new MorseCodeGenerator();
+    it("shall generate space between words as two units", () => {
+        let shmcg = new ShortHandMorseCodeGenerator();
 
-        expect(mcg.generateSpaceBetweenWords()).to.equal("       ");
-        expect(mcg.generateSpaceBetweenWords().length).to.equal(7);
+        expect(shmcg.generateSpaceBetweenWords()).to.equal("  ");
+        expect(shmcg.generateSpaceBetweenWords().length).to.equal(2);
     });
 
-    it("shall generate letter 'A' as '. ---' [dot dash]", () => {
-        let mcg = new MorseCodeGenerator();
-        let expectedMorseCode = ". ---";
+    it("shall generate letter 'A' as '.-' [dot dash]", () => {
+        let mcg = new ShortHandMorseCodeGenerator();
+        let expectedMorseCode = ".-";
 
         expect(mcg.generateLetter('A')).to.equal(expectedMorseCode);
         expect(mcg.generateLetter('a')).to.equal(expectedMorseCode);
     });
+
+/* 
+
+    TODO: refactor all this to support the shorthand version of imc (international morse code)
+
+
 
     it("shall generate letter 'B' as '--- . . .' [dash dot dot dot]", () => {
         let mcg = new MorseCodeGenerator();
