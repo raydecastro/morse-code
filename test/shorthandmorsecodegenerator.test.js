@@ -44,26 +44,25 @@ describe("ShortHandMorseCodeGenerator", () => {
     });
 
     it("shall generate letter 'A' as '.-' [dot dash]", () => {
-        let mcg = new ShortHandMorseCodeGenerator();
+        let shmcg = new ShortHandMorseCodeGenerator();
         let expectedMorseCode = ".-";
 
-        expect(mcg.generateLetter('A')).to.equal(expectedMorseCode);
-        expect(mcg.generateLetter('a')).to.equal(expectedMorseCode);
+        expect(shmcg.generateLetter('A')).to.equal(expectedMorseCode);
+        expect(shmcg.generateLetter('a')).to.equal(expectedMorseCode);
     });
 
-/* 
+    it("shall generate letter 'B' as '-...' [dash dot dot dot]", () => {
+        let shmcg = new ShortHandMorseCodeGenerator();
+        let expectedMorseCode = "-...";
+
+        expect(shmcg.generateLetter('B')).to.equal(expectedMorseCode);
+        expect(shmcg.generateLetter('b')).to.equal(expectedMorseCode);
+    });
+
+    /* 
 
     TODO: refactor all this to support the shorthand version of imc (international morse code)
 
-
-
-    it("shall generate letter 'B' as '--- . . .' [dash dot dot dot]", () => {
-        let mcg = new MorseCodeGenerator();
-        let expectedMorseCode = "--- . . .";
-
-        expect(mcg.generateLetter('B')).to.equal(expectedMorseCode);
-        expect(mcg.generateLetter('b')).to.equal(expectedMorseCode);
-    });
 
     it("shall generate letter 'C' as '--- . --- .' [dash dot dash dot]", () => {
         let mcg = new MorseCodeGenerator();
