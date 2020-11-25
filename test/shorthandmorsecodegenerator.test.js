@@ -59,4 +59,12 @@ describe("ShortHandMorseCodeGenerator", () => {
         expect(shmcg.generateLetter('b')).to.equal(expectedMorseCode);
     });
 
+    it("shall generate letter 'C' as '-.-.' [dash dot dash dot]", () => {
+        let shmcg = new ShortHandMorseCodeGenerator();
+        let expectedMorseCode = "-.-.";
+
+        expect(shmcg.generateLetter('C')).to.equal(expectedMorseCode);
+        expect(shmcg.generateLetter('c')).to.equal(expectedMorseCode);
+    });
+
 });
