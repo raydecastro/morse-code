@@ -37,7 +37,8 @@ class ShortHandMorseCodeGenerator {
         let letterToMorseCodeToHashTable = {
             "a": ".-",
             "b": "-...",
-            "c": "-.-."
+            "c": "-.-.",
+            "d": "-.."
         };
 
         return letterToMorseCodeToHashTable[letter.toLowerCase()];
