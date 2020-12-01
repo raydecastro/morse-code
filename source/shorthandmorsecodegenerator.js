@@ -39,7 +39,8 @@ class ShortHandMorseCodeGenerator {
             "b": "-...",
             "c": "-.-.",
             "d": "-..", 
-            "e": "."
+            "e": ".",
+            "f": "..-."
         };
 
         return letterToMorseCodeToHashTable[letter.toLowerCase()];
