@@ -44,66 +44,42 @@ describe("ShortHandMorseCodeGenerator", () => {
     });
 
     it("shall generate letter 'A' as '.-' [dot dash]", () => {
-        let shmcg = new ShortHandMorseCodeGenerator();
-        let expectedMorseCode = ".-";
-
-        expect(shmcg.generateLetter('A')).to.equal(expectedMorseCode);
-        expect(shmcg.generateLetter('a')).to.equal(expectedMorseCode);
+        validateLetterToMorseCode("A", ".-");
     });
 
     it("shall generate letter 'B' as '-...' [dash dot dot dot]", () => {
-        let shmcg = new ShortHandMorseCodeGenerator();
-        let expectedMorseCode = "-...";
-
-        expect(shmcg.generateLetter('B')).to.equal(expectedMorseCode);
-        expect(shmcg.generateLetter('b')).to.equal(expectedMorseCode);
+        validateLetterToMorseCode("B", "-...");
     });
 
     it("shall generate letter 'C' as '-.-.' [dash dot dash dot]", () => {
-        let shmcg = new ShortHandMorseCodeGenerator();
-        let expectedMorseCode = "-.-.";
-
-        expect(shmcg.generateLetter('C')).to.equal(expectedMorseCode);
-        expect(shmcg.generateLetter('c')).to.equal(expectedMorseCode);
+        validateLetterToMorseCode("C", "-.-.");
     });
 
     it("shall generate letter 'D' as '-..' [dash dot dot]", () => {
-        let shmcg = new ShortHandMorseCodeGenerator();
-        let expectedMorseCode = "-..";
-
-        expect(shmcg.generateLetter('D')).to.equal(expectedMorseCode);
-        expect(shmcg.generateLetter('d')).to.equal(expectedMorseCode);
+        validateLetterToMorseCode("D", "-..");
     });
 
-    it("shall generate letter 'E' as '-..' [dot]", () => {
-        let shmcg = new ShortHandMorseCodeGenerator();
-        let expectedMorseCode = ".";
-
-        expect(shmcg.generateLetter('E')).to.equal(expectedMorseCode);
-        expect(shmcg.generateLetter('e')).to.equal(expectedMorseCode);
+    it("shall generate letter 'E' as '.' [dot]", () => {
+        validateLetterToMorseCode("E", ".");
     });
 
     it("shall generate letter 'F' as '..-.' [dot dot dash dot]", () => {
-        let shmcg = new ShortHandMorseCodeGenerator();
-        let expectedMorseCode = "..-.";
-
-        expect(shmcg.generateLetter('F')).to.equal(expectedMorseCode);
-        expect(shmcg.generateLetter('f')).to.equal(expectedMorseCode);
+        validateLetterToMorseCode("F", "..-.");
     });
 
     it("shall generate letter 'G' as '--.' [dash dash dot]", () => {
-        let shmcg = new ShortHandMorseCodeGenerator();
-        let expectedMorseCode = "--.";
-
-        expect(shmcg.generateLetter('G')).to.equal(expectedMorseCode);
-        expect(shmcg.generateLetter('g')).to.equal(expectedMorseCode);
+        validateLetterToMorseCode("G", "--.");
     });
 
     it("shall generate letter 'H' as '....' [dot dot dot dot]", () => {
-        let shmcg = new ShortHandMorseCodeGenerator();
-        let expectedMorseCode = "....";
-
-        expect(shmcg.generateLetter('H')).to.equal(expectedMorseCode);
-        expect(shmcg.generateLetter('h')).to.equal(expectedMorseCode);
+        validateLetterToMorseCode("H", "....");
     });
 });
+
+function validateLetterToMorseCode(letter, expectedMorseCode) {
+    let shmcg = new ShortHandMorseCodeGenerator();
+
+    expect(shmcg.generateLetter(letter)).to.equal(expectedMorseCode);
+    expect(shmcg.generateLetter(letter.toLowerCase())).to.equal(expectedMorseCode);
+}
+
