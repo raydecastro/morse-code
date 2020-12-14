@@ -74,6 +74,10 @@ describe("ShortHandMorseCodeGenerator", () => {
     it("shall generate letter 'H' as '....' [dot dot dot dot]", () => {
         validateLetterToMorseCode("H", "....");
     });
+
+    it("shall generate letter 'I' as '..' [dot dot]", () => {
+        validateLetterToMorseCode("I", "..");
+    })
 });
 
 function validateLetterToMorseCode(letter, expectedMorseCode) {
