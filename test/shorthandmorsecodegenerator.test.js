@@ -86,6 +86,30 @@ describe("ShortHandMorseCodeGenerator", () => {
     it("shall generate letter 'K' as '-.-' [dash dot dash]", () => {
         validateLetterToMorseCode("K", "-.-");
     });
+
+    it("shall generate letter 'L' as '.-..' [dot dash dot dot]", () => {
+        validateLetterToMorseCode("L", ".-..");
+    });
+
+    it("shall generate letter 'M' as '--' [dash dash]", () => {
+        validateLetterToMorseCode("M", "--");
+    });
+
+    it("shall generate letter 'N' as '-.' [dash dot]", () => {
+        validateLetterToMorseCode("N", "-.");
+    });
+
+    it("shall generate letter 'O' as '---' [dash dash dash]", () => {
+        validateLetterToMorseCode("O", "---");
+    });
+
+    it("shall generate letter 'P' as '.--.' [dot dash dash dot]", () => {
+        validateLetterToMorseCode("P", ".--.");
+    });
+
+    it("shall generate letter 'Q' as '--.-' [dash dash dot dash]", () => {
+        validateLetterToMorseCode("Q", "--.-");
+    });
 });
 
 function validateLetterToMorseCode(letter, expectedMorseCode) {
