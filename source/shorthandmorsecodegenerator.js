@@ -1,4 +1,4 @@
-// TODO: refactor this to remove duplication and possibly use inheritance
+// 2020.1215. RJDC. TODO: refactor this to remove duplication and possibly use inheritance
 //
 // import MorseCodeGenerator from "../source/morsecodegenerator.js";
 //
