@@ -110,6 +110,82 @@ describe("ShortHandMorseCodeGenerator", () => {
     it("shall generate letter 'Q' as '--.-' [dash dash dot dash]", () => {
         validateLetterToMorseCode("Q", "--.-");
     });
+
+    it("shall generate letter 'R' as '.-.' [dot dash dot]", () => {
+        validateLetterToMorseCode("R", ".-.");
+    });
+
+    it("shall generate letter 'S' as '...' [dot dot dot]", () => {
+        validateLetterToMorseCode("S", "...");
+    });
+
+    it("shall generate letter 'T' as '-' [dash]", () => {
+        validateLetterToMorseCode("T", "-");
+    });
+
+    it("shall generate letter 'U' as '..-' [dot dot dash]", () => {
+        validateLetterToMorseCode("U", "..-");
+    });
+
+    it("shall generate letter 'V' as '...-' [dot dot dot dash]", () => {
+        validateLetterToMorseCode("V", "...-");
+    });
+
+    it("shall generate letter 'W' as '.--' [dot dash dash]", () => {
+        validateLetterToMorseCode("W", ".--");
+    });
+
+    it("shall generate letter 'X' as '-..-' [dash dot dot dash]", () => {
+        validateLetterToMorseCode("X", "-..-");
+    });
+
+    it("shall generate letter 'Y' as '-.--' [dash dot dash dash]", () => {
+        validateLetterToMorseCode("Y", "-.--");
+    });
+
+    it("shall generate letter 'Z' as '--..' [dash dash dot dot]", () => {
+        validateLetterToMorseCode("Z", "--..");
+    });
+
+    it("shall generate letter '1' as '.----' [dot dash dash dash dash]", () => {
+        validateLetterToMorseCode("1", ".----");
+    });
+
+    it("shall generate letter '2' as '..---' [dot dot dash dash dash]", () => {
+        validateLetterToMorseCode("2", "..---");
+    });
+
+    it("shall generate letter '3' as '...--' [dot dot dot dash dash]", () => {
+        validateLetterToMorseCode("3", "...--");
+    });
+
+    it("shall generate letter '4' as '....-' [dot dot dot dot dash]", () => {
+        validateLetterToMorseCode("4", "....-");
+    });
+
+    it("shall generate letter '5' as '.....' [dot dot dot dot dot]", () => {
+        validateLetterToMorseCode("5", ".....");
+    });
+
+    it("shall generate letter '6' as '-....' [dash dot dot dot dot]", () => {
+        validateLetterToMorseCode("6", "-....");
+    });
+
+    it("shall generate letter '7' as '--...' [dash dash dot dot dot]", () => {
+        validateLetterToMorseCode("7", "--...");
+    });
+
+    it("shall generate letter '8' as '---..' [dash dash dash dot dot]", () => {
+        validateLetterToMorseCode("8", "---..");
+    });
+
+    it("shall generate letter '9' as '----.' [dash dash dash dash dot]", () => {
+        validateLetterToMorseCode("9", "----.");
+    });
+
+    it("shall generate letter '0' as '-----' [dash dash dash dash dash]", () => {
+        validateLetterToMorseCode("0", "-----");
+    });
 });
 
 function validateLetterToMorseCode(letter, expectedMorseCode) {
